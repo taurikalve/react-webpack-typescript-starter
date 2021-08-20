@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Test() {
-  const [state, setState] = React.useState(0);
+export default function Test():JSX.Element {
+  const [state, setState] = React.useState<number>(0);
 
   return (
     <>
