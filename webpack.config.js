@@ -47,7 +47,7 @@ module.exports = {
   ].filter(Boolean),
   entry: { main: path.resolve(__dirname, './src/index.tsx') },
   output: {
-    //path: path.resolve(__dirname, "build")
+    path: path.resolve(__dirname, isDevelopment ? '.dev' : 'build')
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
