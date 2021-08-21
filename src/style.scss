@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:weight@400;700&display=swap');
+// @import './lib/normalize.css';
+// @import './lib/sanitize.css';
+@import 'normalize.css';
+@import 'sanitize.css';
 
 $font: 'Karla', sans-serif;
 $primary-color: #3e6f9e;

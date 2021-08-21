@@ -8,7 +8,7 @@ export default function App() {
     <>
       <h1>Webpack</h1>
       <button onClick={() => setState('CLICKED')}>{state}</button>
-       <Test />
+      <Test />
     </>
   );
 }

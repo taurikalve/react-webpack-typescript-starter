@@ -1,14 +1,18 @@
 # React Webpack
 
-React Webpack with TypeScript development platform. Similar to CRA, but more lightweight and customizable. Includes **react-refresh**. 
+React Webpack with TypeScript development platform. Similar to CRA, but more lightweight and customizable. Includes **react-refresh**.
 
 ---
 
 ## Notes
 
-Currently includes both CSS and SCSS - remove as necessary.
+#### Style import
 
----
+Supports both **sass** and **css** imports. Also includes [normalize/sanitize css](https://github.com/csstools/postcss-normalizehttps://www.npmjs.com/package/postcss-normalize)
+
+#### Static file serving
+
+Files in `public` folder will be served as `/static/` in browser.
 
 ## Issues
 
