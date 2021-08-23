@@ -14,6 +14,8 @@ Supports both **sass** and **css** imports. Also includes <a href="https://githu
 
 Files in `public` folder will be served as `/static/` in browser.
 
+---
+
 ## Issues
 
 - `browserlist.development` breaks **react-refresh** with current version of **webpack-dev-server**. Add later: `"development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]`

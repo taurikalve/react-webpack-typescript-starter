@@ -14,7 +14,6 @@ module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   module: {
     rules: [
-      //{ test: /\.css$/, use: ['style-loader', 'css-loader'] },
       {
         test: /\.s?css$/,
         use: [
@@ -58,7 +57,7 @@ module.exports = {
       hash: true,
     }),
     new CopyPlugin({
-      patterns: [{ from: 'public', to: 'static' }],
+      patterns: [{ from: 'public', to: 'static', noErrorOnMissing: true }],
     }),
     new ForkTsCheckerWebpackPlugin({
       typescript: {
