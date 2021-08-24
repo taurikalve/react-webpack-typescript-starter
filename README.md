@@ -8,11 +8,11 @@ React Webpack with TypeScript development platform. Similar to CRA, but more lig
 
 ### Proxy
 
-By default the server runs on **8888** and proxies `/api` to `http://localhost:8080/api`. See [DevServer docs](https://webpack.js.org/configuration/dev-server/#devserverproxy)
+By default the server runs on **8888** and proxies `/api` to `http://localhost:8080/api`. See [Webpack devserver.proxy](https://webpack.js.org/configuration/dev-server/#devserverproxy)
 
 ### Style Import
 
-Supports both **sass** and **css** imports. Also includes <a href="https://github.com/csstools/postcss-normalize" target="_blank">normalize/sanitize css</a>
+Supports both **sass** and **css** imports. Also includes [normalize/sanitize.css](https://github.com/csstools/postcss-normalize)
 
 ### Static File Serving
 
