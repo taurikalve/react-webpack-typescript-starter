@@ -1,6 +1,6 @@
 # React Webpack TypeScript
 
-React Webpack with TypeScript development platform. Similar to CRA, but more lightweight and customizable. Includes **react-refresh**.
+React Webpack with TypeScript development platform. Similar to CRA, but more lightweight and customizable. Includes **react-refresh** for a better development experience.
 
 ---
 
@@ -8,15 +8,19 @@ React Webpack with TypeScript development platform. Similar to CRA, but more lig
 
 ### Proxy
 
-By default the server runs on **8888** and proxies `/api` to `http://localhost:8080/api`. See [DevServer docs](https://webpack.js.org/configuration/dev-server/#devserverproxy).
+By default the server runs on **8888** and proxies `/api` to `http://localhost:8080/api`. See [DevServer docs](https://webpack.js.org/configuration/dev-server/#devserverproxy)
 
-### Style import
+### Style Import
 
 Supports both **sass** and **css** imports. Also includes <a href="https://github.com/csstools/postcss-normalize" target="_blank">normalize/sanitize css</a>
 
-### Static file serving
+### Static File Serving
 
 Files in `public` folder will be served as `/static/` in browser.
+
+### Absolute Imports
+
+Supports absolute imports, e.g. `import Test from 'components/Test'`. Configure in `tsconfig.json`
 
 ---
 
