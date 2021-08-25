@@ -12,6 +12,8 @@
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    // "resolveJsonModule": true /* resolved in main.d.ts */,
+    "declaration": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
