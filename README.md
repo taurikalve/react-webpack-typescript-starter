@@ -22,6 +22,10 @@ Files in `public` folder will be served as `/static/` in browser.
 
 Supports absolute imports, e.g. `import Test from 'components/Test'`. Configure in `tsconfig.json`
 
+### SVG import as React Components
+
+Supports SVG import as React Components like `import MySvg from 'assets/mysvg.svg` then use as `<MySvg />`. Props are typed via **main.d.ts**.
+
 ---
 
 ## Issues
