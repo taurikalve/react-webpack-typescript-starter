@@ -24,7 +24,7 @@ Supports absolute imports, e.g. `import Test from 'components/Test'`. Configure 
 
 ### SVG import as React Components
 
-Supports SVG import as React Components like `import MySvg from 'assets/mysvg.svg` then use as `<MySvg />`. Props are typed via **main.d.ts**.
+Supports SVG import as React Components like `import MySvg from 'assets/mysvg.svg'` then use as `<MySvg />`. Props are typed via **main.d.ts**.
 
 ---
 
