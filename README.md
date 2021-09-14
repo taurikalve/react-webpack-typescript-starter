@@ -1,6 +1,6 @@
 # React Webpack TypeScript
 
-React Webpack with TypeScript development platform. Similar to CRA, but more lightweight and customizable. Includes **react-refresh** for a better development experience.
+React Webpack with TypeScript development platform. Similar to CRA, but more lightweight and customizable. Includes **react-refresh** for a better development experience. Tested with Node 16+.
 
 ---
 
