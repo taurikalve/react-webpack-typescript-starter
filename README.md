@@ -8,7 +8,7 @@ React Webpack with TypeScript development platform. Similar to CRA, but more lig
 
 ### Commands
 
-Currently set up for Bash.
+Currently set up for Bash. Use example: `npm run dev`.
 
 - `dev` - Run development server
 - `build` - Build production version in `/build` folder
