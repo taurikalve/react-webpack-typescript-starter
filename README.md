@@ -6,6 +6,16 @@ React Webpack with TypeScript development platform. Similar to CRA, but more lig
 
 ## Notes
 
+### Commands
+
+Currently set up for Bash.
+
+- `dev` - Run development server
+- `build` - Build production version in `/build` folder
+- `build:analyze` - Builds production version and runs build analyzer on `http://localhost:8888`
+- `dev-build` - Creates a development build in `/.dev` folder
+- `serve` - Serve production version
+
 ### Proxy
 
 By default the server runs on **8888** and proxies `/api` to `http://localhost:8080/api`. See [Webpack devserver.proxy](https://webpack.js.org/configuration/dev-server/#devserverproxy)

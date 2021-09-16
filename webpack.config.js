@@ -7,9 +7,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
+const isAnalyze = !!process.env.ANALYZE;
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
@@ -81,11 +84,23 @@ module.exports = {
       },
     }),
     new MiniCssExtractPlugin(),
-    isDevelopment && new webpack.HotModuleReplacementPlugin(),
+    isAnalyze && new BundleAnalyzerPlugin(),
     isDevelopment && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean),
   optimization: {
     minimizer: ['...', new CssMinimizerPlugin()],
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          test: /node_modules/,
+          chunks: 'initial',
+          filename: 'vendors.[contenthash].js',
+          priority: 1,
+          maxInitialRequests: 2, // create only one vendor file
+          minChunks: 1,
+        },
+      },
+    },
   },
   entry: { main: path.resolve(__dirname, './src/index.tsx') },
   output: {
@@ -96,7 +111,7 @@ module.exports = {
     plugins: [new TsconfigPathsPlugin()],
   },
   devServer: {
-    hot: true,
+    hot: isDevelopment && true,
     port: 8888,
     proxy: {
       '/api': 'http://localhost:8080',
