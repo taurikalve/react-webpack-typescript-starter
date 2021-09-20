@@ -6,7 +6,9 @@ export default function App() {
 
   return (
     <>
-      <h1>Webpack</h1>
+      <div>
+        <h1>Webpack</h1>
+      </div>
       <button onClick={() => setState('CLICKED')}>{state}</button>
       <Test />
     </>

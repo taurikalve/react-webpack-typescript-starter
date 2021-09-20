@@ -1,0 +1,6 @@
+.test {
+  padding: 1rem 0;
+  [class~='red'] {
+    color: red;
+  }
+}
