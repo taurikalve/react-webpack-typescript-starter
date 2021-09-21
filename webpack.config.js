@@ -21,7 +21,17 @@ module.exports = {
         test: /\.s?css$/,
         use: [
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
+
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: isDevelopment
+                  ? '[name]__[local]-[hash:base64:10]'
+                  : '[hash:base64]',
+              },
+            },
+          },
           {
             loader: 'postcss-loader',
             options: {
