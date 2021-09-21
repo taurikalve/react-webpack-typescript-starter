@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -66,7 +65,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.html'),
       hash: true,
@@ -83,7 +81,9 @@ module.exports = {
         mode: 'write-references',
       },
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
     isAnalyze && new BundleAnalyzerPlugin(),
     isDevelopment && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean),
@@ -104,7 +104,9 @@ module.exports = {
   },
   entry: { main: path.resolve(__dirname, './src/index.tsx') },
   output: {
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, isDevelopment ? '.dev' : 'build'),
+    clean: true,
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
