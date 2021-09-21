@@ -26,7 +26,7 @@ Supports both **sass** and **css** imports. Also includes [normalize/sanitize.cs
 
 #### CSS and SCSS modules
 
-Has full support for **css** and **scss** modules. Module naming convention is `<name>.module.css`. Use by importing like `import style from './MyTest.module.scss'` and then pass into jsx elements as `<div className={style.myClass} />`. To use nested class names in **scss** use `[class~='myClass'] { ... }`.
+Has full support for **css** and **scss** modules. Module naming convention is `<name>.module.css`. Use by importing like `import style from './MyTest.module.scss'` and then pass into jsx elements as `<div className={style.myClass} />`. To use nested class names in **scss** use `[class~='myClass'] { ... }` or `:global(.myClass){ ... }`.
 
 ### Static File Serving
 
