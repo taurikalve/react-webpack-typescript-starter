@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './Test.module.scss';
+import style from './Test.scss';
 
 export default function Test() {
   const [state, setState] = React.useState<number>(0);

@@ -119,7 +119,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js'],
     plugins: [new TsconfigPathsPlugin()],
     alias: {
-      style: path.resolve(__dirname, 'src/style'),
+      style: path.resolve(__dirname, 'src/styles'), // sass partials importing fix
     },
   },
   devServer: {

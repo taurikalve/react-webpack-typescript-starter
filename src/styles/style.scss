@@ -1,9 +1,9 @@
-@use 'style/variables' as var;
+@use 'style/vars';
 @import url('https://fonts.googleapis.com/css?family=Karla:weight@400;700&display=swap');
 @import 'normalize.css';
 @import 'sanitize.css';
 
 body {
-  font-family: var.$font;
-  color: var.$primary;
+  font-family: vars.$font;
+  color: vars.$primary;
 }
