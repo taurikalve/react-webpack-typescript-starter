@@ -3,10 +3,7 @@
 @import 'normalize.css';
 @import 'sanitize.css';
 
-// $font: 'Karla', sans-serif;
-// $primary-color: #3e6f9e;
-
 body {
   font-family: var.$font;
-  color: var.$primary-color;
+  color: var.$primary;
 }
