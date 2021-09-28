@@ -1,11 +1,12 @@
+@use 'style/variables' as var;
 @import url('https://fonts.googleapis.com/css?family=Karla:weight@400;700&display=swap');
 @import 'normalize.css';
 @import 'sanitize.css';
 
-$font: 'Karla', sans-serif;
-$primary-color: #3e6f9e;
+// $font: 'Karla', sans-serif;
+// $primary-color: #3e6f9e;
 
 body {
-  font-family: $font;
-  color: $primary-color;
+  font-family: var.$font;
+  color: var.$primary-color;
 }

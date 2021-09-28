@@ -52,9 +52,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            // ... other options
             plugins: [
-              // ... other plugins
               isDevelopment && require.resolve('react-refresh/babel'),
             ].filter(Boolean),
           },
@@ -75,7 +73,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html'),
+      template: path.resolve(__dirname, 'src', 'assets', 'index.html'),
       hash: true,
     }),
     new CopyPlugin({
@@ -120,6 +118,9 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     plugins: [new TsconfigPathsPlugin()],
+    alias: {
+      style: path.resolve(__dirname, 'src/style'),
+    },
   },
   devServer: {
     hot: isDevelopment && true,
