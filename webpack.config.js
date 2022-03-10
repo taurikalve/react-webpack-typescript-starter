@@ -127,7 +127,7 @@ module.exports = {
     port: 8888,
     proxy: {
       '/api': {
-        target: 'ws://localhost:8800',
+        target: 'ws://localhost:8080',
       },
       '/api': {
         target: 'http://localhost:8080',
