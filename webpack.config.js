@@ -109,7 +109,7 @@ module.exports = {
       },
     },
   },
-  entry: { main: path.resolve(__dirname, 'src/index.tsx') },
+  entry: { main: path.resolve(__dirname, 'src', 'index.tsx') },
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, isDevelopment ? '.dev' : 'build'),
@@ -119,7 +119,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js'],
     plugins: [new TsconfigPathsPlugin()],
     alias: {
-      style: path.resolve(__dirname, 'src/styles'), // sass partials importing fix
+      style: path.resolve(__dirname, 'src', 'styles'), // sass partials importing fix
     },
   },
   devServer: {
