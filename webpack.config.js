@@ -64,7 +64,7 @@ module.exports = {
           {
             loader: '@svgr/webpack',
             options: {
-              // typescript: true,
+              // typescript: true, // resolved in types folder
             },
           },
         ],
@@ -123,7 +123,7 @@ module.exports = {
     },
   },
   devServer: {
-    hot: isDevelopment && true,
+    hot: isDevelopment,
     port: 8888,
     proxy: {
       '/api': {
