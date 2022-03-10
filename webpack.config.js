@@ -126,7 +126,14 @@ module.exports = {
     hot: isDevelopment && true,
     port: 8888,
     proxy: {
-      '/api': 'http://localhost:8080',
+      '/api': {
+        target: 'ws://localhost:8800',
+      },
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        ws: true,
+      },
     },
     historyApiFallback: true,
   },

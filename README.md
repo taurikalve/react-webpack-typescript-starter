@@ -18,7 +18,7 @@ Currently set up for Bash. Use example: `npm run dev`.
 
 ### Proxy
 
-By default the server runs on **8888** and proxies `/api` to `http://localhost:8080/api`. See [Webpack devserver.proxy](https://webpack.js.org/configuration/dev-server/#devserverproxy)
+By default the server runs on **8888** and proxies `/api` to `http://localhost:8080/api`. Default config includes WebSocket support. See [Webpack devserver.proxy](https://webpack.js.org/configuration/dev-server/#devserverproxy)
 
 ### Style Import
 
