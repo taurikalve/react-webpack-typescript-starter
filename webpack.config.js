@@ -109,7 +109,7 @@ module.exports = {
       },
     },
   },
-  entry: { main: path.resolve(__dirname, './src/index.tsx') },
+  entry: { main: path.resolve(__dirname, 'src/index.tsx') },
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, isDevelopment ? '.dev' : 'build'),
